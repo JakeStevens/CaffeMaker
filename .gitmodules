@@ -1,0 +1,21 @@
+[submodule "protobuf"]
+	path = protobuf
+	url = https://github.com/google/protobuf
+[submodule "glog"]
+	path = glog
+	url = https://github.com/google/glog
+[submodule "gflags"]
+	path = gflags
+	url = https://github.com/gflags/gflags
+[submodule "leveldb"]
+	path = leveldb
+	url = https://github.com/google/leveldb
+[submodule "lmdb"]
+	path = lmdb
+	url = https://github.com/LMDB/lmdb
+[submodule "snappy"]
+	path = snappy
+	url = https://github.com/google/snappy
+[submodule "caffe"]
+	path = caffe
+	url = https://github.com/BVLC/caffe
