@@ -161,3 +161,5 @@ make all
 make test
 make runtest
 cd ..
+
+sudo ldconfig
