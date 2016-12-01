@@ -74,7 +74,6 @@ make
 make check
 sudo make install
 cd ..
-exit
 
 # boost
 cd boost_1_60_0 
@@ -162,3 +161,5 @@ make all
 make test
 make runtest
 cd ..
+
+sudo ldconfig
