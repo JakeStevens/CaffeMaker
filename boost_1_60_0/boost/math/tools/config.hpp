@@ -265,15 +265,7 @@
 //
 // Test whether to support __float128, if we don't have quadmath.h then this can't currently work:
 //
-#ifndef BOOST_MATH_USE_FLOAT128
-#ifdef __has_include
-#if ! __has_include("quadmath.h")
 #define BOOST_MATH_DISABLE_FLOAT128
-#endif
-#elif !defined(BOOST_ARCH_X86)
-#define BOOST_MATH_DISABLE_FLOAT128
-#endif
-#endif
 //
 // And then the actual configuration:
 //
