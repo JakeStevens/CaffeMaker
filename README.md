@@ -42,6 +42,12 @@ Dependencies:
 + lmdb (Version 2.8) *
 + snappy (Version 1.1.3) *
 
+If you are updating the dependencies, make sure that:
++ data/ and models/ are removed from the .gitignore for Caffef
++ ./autogen.sh files are removed from the .gitignore for protobuff
++ ./autogen.sh is ran for protobuff (not all embedded Linux distros
+have curl)
+
 Note: the code that does a PKG_CHECK on snappy (inside configure file)
 has been removed. This is checking for gflags, which must be installed
 anyways
