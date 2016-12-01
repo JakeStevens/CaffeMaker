@@ -67,7 +67,7 @@ fi
 
 # Protobuf
 cd protobuf
-./autogen.sh
+touch aclocal.m4 configure Makefile.in Makefile.am
 ./configure
 make clean
 make
