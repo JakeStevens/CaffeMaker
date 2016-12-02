@@ -77,7 +77,7 @@ cd ..
 
 # boost
 cd boost_1_60_0 
-chmomd +x ./tools/build/src/engine/build.sh
+chmod +x ./tools/build/src/engine/build.sh
 # Must force disable float 128 support
 # by removing #ifdef/#endif around BOOST_MATH_DISABLE_FLOAT128 in
 # boost/math/tools/config.hpp
