@@ -1,18 +1,24 @@
 # CaffeMaker
+
+CaffeMaker was created primarily for use an integrated Intel + FPGA environment
+running an embedded Linux distro, specifically the DE2-150 board from Altera.
+By following the recommended usage, you can easily and quickly build Caffe on
+your FPGA platform, allowing for the design and benchmarking of accelerators
+for Deep Learning.
+
 Recommended Usage:
 
 1. Download zip from Github.
 2. Unzip file.
 3. Enter the unzipped directory.
 4. Make sure make-caffe.sh is executable
-5. Make necessary changes to Makefile and Makefile.config
+5. Make sure that the install for boost in make-caffe.sh is correct (32 v 64)
+6. Make necessary changes to Makefile.config
 6. Run make-caffe.sh
 
 
 Necessary Changes To Caffe:
-+ add the following lines to the Makefile:
-    + CXXFLAGS += -Ipath/to/hdf5-1.8.18/src
-    + CXXFLAGS += -Ipath/to/hdf5-1.8.18/hl/src
++ copy Makefile.config.example to Makefile.config
 
 + make the following changes to Makefile.config:
     + uncomment CPU_ONLY := 1 (if using only CPU)
@@ -22,6 +28,7 @@ Necessary Changes To Caffe:
 
 This installer has been tested on the following environments:
 + Ubuntu 16.04 
++ Yocto
 
 Uses Caffe commit 24d2f67
 
