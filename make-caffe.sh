@@ -165,11 +165,11 @@ chmod +x ./configure
 make; sudo make install
 cd ..
 
+sudo ldconfig
+
 # Caffe
 cd caffe
 make all
 make test
 make runtest
 cd ..
-
-sudo ldconfig
