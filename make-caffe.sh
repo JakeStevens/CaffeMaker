@@ -67,6 +67,7 @@ fi
 
 # Protobuf
 cd protobuf
+chmod +x ./configure
 touch aclocal.m4 configure Makefile.in Makefile.am
 ./configure
 make clean
@@ -81,7 +82,9 @@ chmod +x ./tools/build/src/engine/build.sh
 # Must force disable float 128 support
 # by removing #ifdef/#endif around BOOST_MATH_DISABLE_FLOAT128 in
 # boost/math/tools/config.hpp
+chmod +x ./bootstrap.sh
 ./bootstrap.sh
+chmod +x ./bjam
 sudo ./bjam install
 cd ..
 
@@ -111,6 +114,7 @@ mkdir build
 cd build
 # cripple-atlas-performance necessary for because of Atom
 # change 32 to reflect specific machine (aka, 32 or 64)
+chmod +x configure
 ../configure --shared --dylibs -b 64 --nof77 --cripple-atlas-performance
 chmod +x bin/ATLrun.sh
 make
@@ -125,13 +129,15 @@ cd ..
 
 # zlib
 cd zlib-1.2.8
+chmod +x ./configure
 ./configure
 make
 sudo make install
 cd ..
  
 # hdf5
-cd hdf5-1.10.0-patch1 
+cd hdf5-1.10.0-patch1
+chmod +x ./configure 
 ./configure --enable-cxx --prefix=/usr/local/
 make
 sudo make install
@@ -154,6 +160,7 @@ cd ../../..
 
 # Snappy
 cd snappy-1.1.3
+chmod +x ./configure
 ./configure
 make; sudo make install
 cd ..
