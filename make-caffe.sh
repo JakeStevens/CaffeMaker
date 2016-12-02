@@ -114,7 +114,7 @@ mkdir build
 cd build
 # cripple-atlas-performance necessary for because of Atom
 # change 32 to reflect specific machine (aka, 32 or 64)
-chmod +x configure
+chmod +x ../configure
 ../configure --shared --dylibs -b 64 --nof77 --cripple-atlas-performance
 chmod +x bin/ATLrun.sh
 make
