@@ -139,6 +139,7 @@ cd ..
 
 # LevelDB
 cd leveldb
+chmod +x build_detect_platform
 make
 sudo cp out-shared/libleveldb.* /usr/local/lib
 cd include
