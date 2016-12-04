@@ -165,6 +165,7 @@ chmod +x ./configure
 make; sudo make install
 cd ..
 
+sudo echo "/usr/local/lib" >> /etc/ld.so.conf
 sudo ldconfig
 
 # Caffe
