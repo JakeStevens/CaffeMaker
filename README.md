@@ -64,6 +64,9 @@ If you are updating the dependencies, make sure that:
 + ./autogen.sh files are removed from the .gitignore for protobuff
 + ./autogen.sh is ran for protobuff (not all embedded Linux distros
 have curl)
++ If you update Caffe, you may have to edit the path to hdf5 inside
+the header file. You will know you need to if it errors out and lets
+you know..
 
 Note: the code that does a PKG_CHECK on snappy (inside configure file)
 has been removed. This is checking for gflags, which must be installed
